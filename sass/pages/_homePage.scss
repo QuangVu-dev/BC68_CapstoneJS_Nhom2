@@ -1,0 +1,47 @@
+// carousel
+.carousel {
+    overflow: hidden;
+  
+    .carousel-inner {
+      .carousel-item {
+        a {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  
+    .carousel-control-prev {
+      left: -120px;
+  
+      .carousel-control-prev-icon {
+        border: 2px solid rgb(239, 239, 239);
+        background-color: $black;
+        opacity: 0.2;
+      }
+    }
+  
+    .carousel-control-next {
+      right: -120px;
+  
+      .carousel-control-next-icon {
+        border: 2px solid rgb(239, 239, 239);
+        background-color: $black;
+        opacity: 0.2;
+      }
+    }
+  }
+  
+  // featured
+  .featured {
+    margin: 30px 0px 0px;
+    height: 20%;
+    h2 {
+      letter-spacing: 1px;
+    }
+    .carousel {
+      margin-top: 0px;
+    }
+  }
+  
