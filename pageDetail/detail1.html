@@ -48,6 +48,7 @@
     <!-- My Css -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/styleDetaills.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
   </head>
 
   <body>
@@ -242,15 +243,18 @@
                   src="https://shop.cyberlearn.vn/images/nike-air-max-270-react.png"
                   alt=""
                 />
+                <span id="heart_like" class="h_like">
+                  <i id="heart_l" class="fa-regular fa-heart"></i>
+                </span>
               </div>
             </div>
             <!-- sticky -->
             <div class="nav_sticky">
               <ul>
-                <li><a href="#">Thông tin sản phẩm</a></li>
-                <li><a href="#">Có thể bạn cũng thích</a></li>
-                <li><a href="#">Đánh giá</a></li>
-                <li><a href="#">Đặt câu hỏi</a></li>
+                <li><a href="#about_s">Thông tin sản phẩm</a></li>
+                <li><a href="#like">Có thể bạn cũng thích</a></li>
+                <li><a href="#rateshoe">Đánh giá</a></li>
+                <li><a href="#questionshoe">Đặt câu hỏi</a></li>
               </ul>
             </div>
             <!-- about -->
@@ -280,7 +284,7 @@
               <div class="row shoe_items">
                 <div class="items col-5">
                   <a href="">
-                    <img src="" alt="" />
+                    <img src="../img/shoe1.png" alt="" />
                     <p>Giày Thể Thao Nam Reebok</p>
                     <!-- <span></span> -->
                     <span>1.599.000 đ</span>
@@ -288,7 +292,7 @@
                 </div>
                 <div class="items col-5">
                   <a href="">
-                    <img src="" alt="" />
+                    <img src="../img/shoe1.png" alt="" />
                     <p>Giày Thể Thao Nam Reebok</p>
                     <!-- <span></span> -->
                     <span>1.599.000 đ</span>
@@ -296,7 +300,7 @@
                 </div>
                 <div class="items col-5">
                   <a href="">
-                    <img src="" alt="" />
+                    <img src="../img/shoe1.png" alt="" />
                     <p>Giày Thể Thao Nam Reebok</p>
                     <!-- <span></span> -->
                     <span>1.599.000 đ</span>
@@ -304,7 +308,7 @@
                 </div>
                 <div class="items col-5">
                   <a href="">
-                    <img src="" alt="" />
+                    <img src="../img/shoe1.png" alt="" />
                     <p>Giày Thể Thao Nam Reebok</p>
                     <!-- <span></span> -->
                     <span>1.599.000 đ</span>
@@ -347,6 +351,7 @@
                 <span style="font-weight: 700; font-size: 25px"
                   >1.000.000 đ</span
                 >
+                <!-- <span></span> -->
                 <p style="margin-bottom: 0; color: black; font-weight: 700">
                   Màu sắc
                 </p>
@@ -389,7 +394,75 @@
                           ></button>
                         </div>
                         <div class="modal-body">
-                          <h2>HƯỚNG DẪN CHỌN SIZE GIÀY</h2>
+                          <!-- <h2>HƯỚNG DẪN CHỌN SIZE GIÀY</h2> -->
+                          <p>Đơn vị đo: cm</p>
+                          <div class="item_img">
+                            <img src="../img/size1.png" alt="" />
+                            <img src="../img/size2.png" alt="" />
+                          </div>
+                          <h4 class="">BẠN GẦN VỪA VỚI HAI KÍCH CỠ?</h4>
+                          <div class="note_size">
+                            <i class="fa-solid fa-circle"></i>
+                            <span style="text-decoration: underline"
+                              >Lưu ý: Reebok sử dụng size US</span
+                            >
+                            <p>
+                              Để chọn được sản phẩm phù hợp, Quý khách ưu tiên
+                              chọn sản phẩm theo chiều dài bàn chân và loại sản
+                              phẩm
+                            </p>
+                            <ul>
+                              <li>
+                                <i class="fa-solid fa-circle"></i>
+                                Sản phẩm Nam / Unisex: sử dụng chung thông số
+                                trên bảng size. Riêng sản phẩm Unisex được thiết
+                                kế bảng size dành cho cả Nam và Nữ nên thông số
+                                sẽ hơi rộng hơn so với sản phẩm nữ thông thường,
+                                lúc này, quý khách vui lòng đo lại chiều dài bàn
+                                chân để có được size số tương ứng phù hợp.
+                              </li>
+                              <li>
+                                <i class="fa-solid fa-circle"></i>
+                                Sản phẩm Nữ: sử dụng thông số riêng dành cho nữ
+                              </li>
+                            </ul>
+                            <p>Ví dụ: Chiều dài bàn chân của bạn là 24 cm:</p>
+                            <p class="ms-3">
+                              + Đối với sản phẩm Nam/Unisex: tương ứng với size
+                              châu Âu là 37.5 EU và size US là 6 US (ôm sát)
+                              hoặc 6.5 US (thoải mái).
+                            </p>
+                            <p class="ms-3">
+                              + Đối với sản phẩm Nữ: tương ứng với size châu Âu
+                              là 37.5 EU và size US là 7 US (ôm sát) hoặc 7.5 US
+                              (thoải mái).
+                            </p>
+                            <p>
+                              <i class="fa-solid fa-circle me-2"></i>
+                              Áp dụng đối với các dòng giày cơ bản (Club C,
+                              Classic Leather, Resonator, BB4000, Floatride,...)
+                              Đối với các dòng giày tập luyện (training) (Nano)
+                              thì form giày sẽ ôm sát để cố định chân khi tập
+                              luyện nên khách hàng có thể chọn lớn hơn 0.5 size
+                              hoặc 1 size hoặc hơn tùy theo nhu cầu sử dụng
+                            </p>
+                            <div class="not_size">
+                              <span>KHÔNG ĐÚNG KÍCH THƯỚC HAY MÀU SẮC </span>
+                              <p>
+                                Bạn có thể đổi hàng trong vòng 07 ngày đối với
+                                sản phẩm có mức chiết khấu dưới hoặc bằng 20%.
+                                Tham khảo thêm chính sách đổi hàng của chúng tôi
+                                để biết thêm chi tiết.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="footer_modal">
+                            <h4>KHÔNG ĐÚNG KÍCH CỠ HOẶC MÀU SẮC?</h4>
+                            <span
+                              >Không vấn đề gì, chúng tôi chấp nhận trả
+                              hàng.</span
+                            >
+                          </div>
                         </div>
                         <!-- <div class="modal-footer">
                         <button
@@ -436,17 +509,30 @@
 
               <!-- buy -->
               <div class="buy_shoe">
-                <span style="font-weight: 650">Hình thức mua hàng</span>
+                <span style="font-weight: 650" class="m-3"
+                  >Hình thức mua hàng</span
+                >
                 <div class="form_buy">
                   <form action="">
                     <input type="radio" id="" name="buy" value="HTML" checked />
-                      <label for="html">Giao hàng tiêu chuẩn</label><br />
+                    <label for="html">Giao hàng tiêu chuẩn</label><br />
                     <input type="radio" id="" name="buy" value="HTML" checked />
-                     
                     <label for="html"
                       >Giao hàng nhanh / Nhận hàng tại Tp HCM</label
                     >
                   </form>
+                </div>
+                <div class="store">
+                  <button>
+                    <i
+                      class="fa-solid fa-store me-3"
+                      style="color: rgb(36, 68, 150); font-size: 20px"
+                    ></i>
+                    <span style="font-weight: 700">8 / 8 </span
+                    ><span class="ms-2">cửa hàng còn mặt hàng này</span>
+                    <span class="ms-3">></span>
+                  </button>
+                  <!-- <button class="ms-5">></button> -->
                 </div>
 
                 <!-- map shop -->
@@ -645,5 +731,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+
+    <!-- index -->
+    <script src="../js/index.js"></script>
   </body>
 </html>

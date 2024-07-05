@@ -1,0 +1,20 @@
+@media (max-width: 800px) {
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+    .col-7 {
+        width: 80%;
+        display: inline-block;
+        /* width: 750px; */
+    }
+
+    .col-4 {
+        display: inline-block;
+        width: 80%;
+    }
+
+    .header_content {
+        margin-left: 30px;
+    }
+}
