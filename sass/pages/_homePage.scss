@@ -143,6 +143,18 @@
                 color: #333;
                 font-weight: bold;
               }
+              .btn-favorite {
+                top: 20px;
+                left: 20px;
+                border: unset;
+                background-color: transparent;
+                font-size: $fs-lg;
+
+                .span-favorite {
+                  display: flex;
+                  justify-content: center;
+                }
+              }
             }
           }
         }

@@ -138,6 +138,17 @@ img {
   color: #333;
   font-weight: bold;
 }
+.new_arrivals .arrivals_wrapper .arrivals_header .arrivals_header_content .carousel-inner .carousel-item .product_item_container .btn-favorite {
+  top: 20px;
+  left: 20px;
+  border: unset;
+  background-color: transparent;
+  font-size: 20px;
+}
+.new_arrivals .arrivals_wrapper .arrivals_header .arrivals_header_content .carousel-inner .carousel-item .product_item_container .btn-favorite .span-favorite {
+  display: flex;
+  justify-content: center;
+}
 
 .new_collection {
   display: flex;
@@ -422,9 +433,8 @@ header .header_content .header_top {
   width: 100%;
 }
 header .header_content .header_top .span-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 header .header_content .header_bottom {
   background-color: transparent;
@@ -480,20 +490,25 @@ header .header_content .header_bottom nav .header-menu .navbar-nav .nav-item .na
 header .header_content .header_bottom nav .header-menu .navbar-nav .nav-item .nav-link .link:hover::before {
   width: 100%;
 }
-header .header_content .header_bottom nav .header-menu .search-form .form-control {
+header .header_content .header_bottom nav .header-menu .search-form {
+  grid-template-columns: 5fr 1fr 1fr 1fr;
+}
+header .header_content .header_bottom nav .header-menu .search-form form {
   position: relative;
+}
+header .header_content .header_bottom nav .header-menu .search-form form .form-control {
   border-radius: unset;
 }
-header .header_content .header_bottom nav .header-menu .search-form .form-control:focus::-moz-placeholder {
+header .header_content .header_bottom nav .header-menu .search-form form .form-control:focus::-moz-placeholder {
   color: transparent;
 }
-header .header_content .header_bottom nav .header-menu .search-form .form-control:focus::placeholder {
+header .header_content .header_bottom nav .header-menu .search-form form .form-control:focus::placeholder {
   color: transparent;
 }
-header .header_content .header_bottom nav .header-menu .search-form .search-icon {
+header .header_content .header_bottom nav .header-menu .search-form form .search-icon {
   position: absolute;
   cursor: pointer;
-  right: 15%;
+  right: 10%;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -534,9 +549,26 @@ header .header_content .header_bottom nav .header-menu .favorite {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 header .header_content .header_bottom nav .header-menu .favorite .favorite-content {
   font-size: 20px;
+}
+header .header_content .header_bottom nav .header-menu .favorite .favorite-notification {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #000;
+  display: none;
+  text-align: center;
 }
 header .header_content .header_bottom nav .header-menu .cart-shopping {
   width: 48px;
@@ -549,7 +581,7 @@ header .header_content .header_bottom nav .header-menu .cart-shopping .btn-cart 
   font-size: 20px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   header .header_content .header_bottom nav .header-menu .navbar-nav .nav-item .nav-link {
     padding: 6px !important;
   }
@@ -557,7 +589,7 @@ header .header_content .header_bottom nav .header-menu .cart-shopping .btn-cart 
     font-size: 14px;
   }
   header .header_content .header_bottom nav .header-menu .search-form .search-icon {
-    right: 17%;
+    right: 17.5%;
   }
   header .header_content .header_bottom nav .header-menu .search-form .user-info .user-icon {
     font-size: 16px;
@@ -577,78 +609,13 @@ header .header_content .header_bottom nav .header-menu .cart-shopping .btn-cart 
   header .header_content .header_bottom nav .header-menu .navbar-nav .nav-item .nav-link .link {
     font-size: 14px;
   }
-  header .header_content .header_bottom nav .header-menu .search-form {
-    justify-content: space-between;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .form-control {
-    width: 500px;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .search-icon {
-    top: 90%;
-    right: 30%;
-  }
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 450px) {
+  .header_top {
+    padding: 7px 0 !important;
+  }
   .span-container {
-    display: block;
-  }
-  .span-container span {
-    display: block;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .header_content .header_bottom nav .header-menu .navbar-nav {
-    margin-right: auto;
-    text-align: left;
-  }
-  header .header_content .header_bottom nav .header-menu .navbar-nav .nav-item .nav-link .link {
-    font-size: 14px;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form {
-    justify-content: space-between;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .form-control {
-    width: 300px;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .search-icon {
-    top: 90%;
-    right: 45%;
-  }
-}
-@media screen and (max-width: 576px) {
-  header .header_content .header_bottom nav .header-menu .navbar-nav {
-    margin-right: auto;
-    text-align: left;
-  }
-  header .header_content .header_bottom nav .header-menu .navbar-nav .nav-item .nav-link .link {
-    font-size: 14px;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .form-control {
-    width: 300px;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .search-icon {
-    top: 90%;
-    right: 45%;
-  }
-}
-@media screen and (max-width: 480px) {
-  header .header_content .header_bottom nav .header-menu .navbar-nav {
-    margin-right: auto;
-    text-align: left;
-  }
-  header .header_content .header_bottom nav .header-menu .navbar-nav .nav-item .nav-link .link {
-    font-size: 14px;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .form-control {
-    width: 200px;
-  }
-  header .header_content .header_bottom nav .header-menu .search-form .search-icon {
-    top: 90%;
-    right: 58%;
+    font-size: 8px;
   }
 }
 .modal-backdrop {

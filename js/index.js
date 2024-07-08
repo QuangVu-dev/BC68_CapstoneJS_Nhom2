@@ -24,7 +24,7 @@ function renderProduct(arr) {
     let { image, name, price } = item;
     content += `
     <div class="col-md-3 col-sm-6 mt-4">
-      <div class="product_item">
+      <div class="product_item position-relative">
         <img src="${image}" alt="${name}"/>
         <h5 >${name}</h5>
         <p class="mb-0">Types of Shoes</p>
@@ -36,6 +36,7 @@ function renderProduct(arr) {
           currency: "USD",
         })}</div>
         </div>
+        <button class="btn-favorite position-absolute heart-icon"><span class="span-favorite"><i class="fa-regular fa-heart icon-favorite"></i></span></button>
       </div>
     </div>
     `;
@@ -96,3 +97,19 @@ function renderCollection(arr) {
   }
   document.getElementById("collection_item").innerHTML = content;
 }
+
+// Thêm sản phẩm yêu thích vào danh sách
+document.addEventListener("DOMContentLoaded", () => {
+  let heartIcons = document.querySelectorAll(".heart-icon");
+  let listCount = document.querySelector(".favorite-notification");
+  let count = 0;
+
+  heartIcons.forEach((icon, index) => {
+    icon.addEventListener("click", () => {
+      count++;
+      listCount.style.display = "block";
+      listCount.textContent = count;
+      icon.classList.toggle("clicked");
+    });
+  });
+});
