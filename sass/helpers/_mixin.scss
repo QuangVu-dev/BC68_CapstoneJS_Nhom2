@@ -20,7 +20,7 @@
 }
 
 @mixin styleSignIn($color, $bg, $opacity, $border-width) {
-  padding: 8px 15px;
+  padding: 4px 8px;
   border-radius: 2px;
   background-color: $bg;
   color: $color;
