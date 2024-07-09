@@ -40,12 +40,20 @@
               currency: "USD",
             })}</div>
             </div>
-            <button class="btn-favorite position-absolute heart-icon"><span class="span-favorite"><i class="fa-regular fa-heart icon-favorite"></i></span></button>
+            <button class="btn-favorite position-absolute heart-icon"><span class="span-favorite" id="spanlove"><i class="fa-regular fa-heart icon-favorite" id="heartlove"></i></span></button>
           </div>
         </div>
         `;
       });
       document.getElementById("product_item").innerHTML = content;
+    }
+
+    // document.getElementById("heart_love").onclick = function() {
+    //   document.getElementById("heart_love").classList.toggle("heart_lovee");
+    // }
+    document.getElementsByClassName("btn-favorite").onclick = function() {
+      // document.getElementById("heartlove").classList.toggle("heart_lovee");
+      document.getElementsByClassName("btn-favorite").classList.toggle("heart_lovee");
     }
 
 // document.getElementById("product_item").innerHTML = "123456789";
