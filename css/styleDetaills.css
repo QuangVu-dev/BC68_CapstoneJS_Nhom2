@@ -381,7 +381,7 @@ section {
 .btn_gr {
   display: flex;
   justify-content: space-between; 
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 .btn_gr button {
@@ -438,6 +438,11 @@ section {
   background-color: rgb(0, 0, 0);
 }
 
+
+/* back to top */
+/* .backToTop {
+  visibility: visible;
+} */
 
 /*      Animation */
 

@@ -54,176 +54,236 @@
   <body>
     <!--      NavBar -->
     <!-- header -->
-    <header class="header">
+    <!-- test -->
+    <header>
       <div class="header_content">
         <div class="header_top">
           <div class="container top_content">
-            <div class="top_left">
-              <!-- Button trigger modal -->
-              <span data-bs-toggle="modal" data-bs-target="#exampleModal">
-                FREESHIP ALL ORDER FROM 1.5M VND
-              </span>
-
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        FREESHIP ALL ORDER FROM 1.5M VND
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      For all orders from 1.5 million VND, shipping fee is free.
-                      Otherwise, standard shipping charges is applied. Check out
-                      our delivery Terms & Conditions for more details.
-                    </div>
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active w-100">
+                  <div class="span-container">
+                    <span
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal1"
+                    >
+                      FREESHIP ALL ORDER FROM 1.5M VND
+                    </span>
+                    <span
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal2"
+                      class="text-end"
+                    >
+                      RETURN POLICY
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="top_center"></div>
-            <div class="top_right">
-              <!-- Button trigger modal -->
-              <span data-bs-toggle="modal" data-bs-target="#exampleModal">
-                RETURN POLICY
-              </span>
+          </div>
+          <!-- Modal 1 -->
+          <div
+            class="modal fade"
+            id="exampleModal1"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog text-start">
+              <div class="modal-content" style="padding: 24px">
+                <div class="modal-header p-0">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel1">
+                    FREESHIP ALL ORDER FROM 1.5M VND
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body p-0" style="font-size: 14px">
+                  For all orders from 1.5 million VND, shipping fee is free.
+                  <br />
+                  Otherwise,
+                  <a class="link-modal" href="#">standard shipping charges</a>
+                  is applied.
+                  <br />
+                  Check out our delivery
+                  <a class="link-modal" href="#">Terms & Conditions</a> for more
+                  details.
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        RETURN POLICY
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      EASY EXCHANGE WITHIN 07 DAYS WITH PRODUCTS THAT DISCOUNT
-                      OFF LESS THAN 20%. PRODUCTS THAT DISCOUNT OFF MORE THAN
-                      20% CANNOT BE RETURN. If you are not entirely satisfied
-                      with your order, contact our hotline 18006035. Check out
-                      our Return Policy for more details.
-                    </div>
-                  </div>
+          <!-- Modal 2 -->
+          <div
+            class="modal fade"
+            id="exampleModal2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog text-start">
+              <div class="modal-content" style="padding: 24px">
+                <div class="modal-header p-0">
+                  <h1 class="modal-title fs-3" id="exampleModalLabel2">
+                    RETURN POLICY
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body p-0" style="font-size: 14px">
+                  EASY EXCHANGE WITHIN 07 DAYS WITH PRODUCTS THAT DISCOUNT OFF
+                  LESS THAN 20%. <br />
+                  PRODUCTS THAT DISCOUNT OFF MORE THAN 20% CANNOT BE RETURN.
+                  <br />
+                  If you are not entirely satisfied with your order, contact our
+                  hotline 18006035. <br />
+                  Check out our
+                  <a class="link-modal" href="">Return Policy</a> for more
+                  details.
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="header_bottom">
-          <div class="container bottom_content">
-            <div class="bottom_wrapper">
-              <div class="bottom_left">
-                <a href="/">
-                  <div class="logo"><img src="../img/logo.png" alt="" /></div>
-                </a>
-                <ul class="left_menu">
-                  <li class="menu_item">
-                    <a href="">MEN</a>
+          <div class="container">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="#">
+                <div class="logo"></div>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse header-menu"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      ><span class="link">MEN</span></a
+                    >
                   </li>
-                  <li class="menu_item">
-                    <a href="">WOMEN</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="link">WOMEN</span></a
+                    >
                   </li>
-                  <li class="menu_item">
-                    <a href="">NEW ARRIVALS</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="link">NEW ARRIVALS</span></a
+                    >
                   </li>
-                  <li class="menu_item">
-                    <a href="">SALE</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="link">SALES</span></a
+                    >
                   </li>
-                  <li class="menu_item">
-                    <a href="">DELIVERY FROM STORES</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="link">LIMITED EDITION</span></a
+                    >
                   </li>
                 </ul>
-              </div>
-              <div class="bottom_right">
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button class="btn btn-outline-success" type="submit">
-                    Search
+                <div class="search-form d-grid">
+                  <form
+                    class="d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <div class="search-icon">
+                      <span
+                        ><a href="#" class="text-dark"
+                          ><i class="fa-solid fa-magnifying-glass"></i></a
+                      ></span>
+                    </div>
+                  </form>
+
+                  <button class="user-info">
+                    <span class="user-icon"
+                      ><a href="#" class="text-dark"
+                        ><i class="fa-regular fa-user"></i></a
+                    ></span>
+                    <span class="notification">1</span>
                   </button>
-                </form>
-                <div class="user_info">
-                  <button type="button" class="info">
-                    <span>Sign in</span>
-                  </button>
-                </div>
-                <div class="favorite">
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-                <div class="cart_shopping">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="language">
-                  <div class="dropdown">
+                  <div class="favorite">
+                    <span class="favorite-content">
+                      <a href="#" class="text-dark"
+                        ><i class="far fa-heart"></i
+                      ></a>
+                    </span>
+                    <span class="favorite-notification" id="list-count"></span>
+                  </div>
+                  <div class="cart-shopping">
                     <button
-                      class="btn btn-secondary dropdown-toggle"
                       type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                      class="btn btn-cart"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
                     >
-                      <img
-                        src="https://reebok.com.vn/svg/united-kingdom.svg"
-                        alt="Language"
-                      />
+                      <span class="shopping-icon"
+                        ><a href="#" class="text-dark"
+                          ><i class="fas fa-shopping-cart"></i></a
+                      ></span>
                     </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><img
-                            src="https://reebok.com.vn/svg/united-kingdom.svg"
-                            alt="English"
-                          />
-                          <p>English</p></a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><img
-                            src="https://reebok.com.vn/svg/vietnam.svg"
-                            alt="Vietnamese"
-                          />
-                          <p>Vietnamese</p></a
-                        >
-                      </li>
-                    </ul>
+
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              YOUR CART IS EMPTY
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
         </div>
       </div>
     </header>
+    <!-- -- -->
 
     <!--      ConTent -->
     <section>
@@ -238,11 +298,11 @@
               <!-- <div class="header_content">
                 <span><a href="#">Trang chủ</a> / Sản phẩm</span>
               </div> -->
-              <div class="img_item">
-                <img
+              <div class="img_item" id="imgItem">
+                <!-- <img
                   src="https://shop.cyberlearn.vn/images/nike-air-max-270-react.png"
                   alt=""
-                />
+                /> -->
                 <span id="heart_like" class="h_like">
                   <i id="heart_l" class="fa-regular fa-heart"></i>
                 </span>
@@ -259,9 +319,9 @@
             </div>
             <!-- about -->
             <div class="row about_shoe" id="about_s">
-              <div class="about">
+              <div class="about" id="nameItem">
                 <h3 style="text-align: center">
-                  GIÀY THỂ THAO REEBOK CLUB C CLEAN
+                  <!-- GIÀY THỂ THAO REEBOK CLUB C CLEAN -->
                 </h3>
                 <h4 style="text-align: center">
                   ĐÔI GIÀY CỔ ĐIỂN ĐƯỢC NÂNG CẤP VỚI CÁC CHI TIẾT VÀ VẬT LIỆU
@@ -369,7 +429,7 @@
           <!-- content right -->
           <div class="col-4">
             <div class="col_container">
-              <div class="row content_shoe">
+              <div class="row content_shoe" id="nameItemR">
                 <h1>Nike</h1>
                 <h3 style="color: #646464; font-size: 22px">Giày Nam, Nữ</h3>
                 <span style="font-weight: 700; font-size: 25px"
@@ -506,7 +566,7 @@
                 </div>
               </div>
 
-              <!--  -->
+              <!-- button size -->
               <div class="btn_gr">
                 <!-- <div class="btn_dp"> -->
                 <div class="">
@@ -529,6 +589,7 @@
                 <div class="">
                   <button class="btn p-3"><span>8.0</span></button>
                 </div>
+
                 <!-- </div> -->
               </div>
 
@@ -595,59 +656,82 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer">
+    <!-- test -->
+    <footer>
       <div class="footer_top">
         <div class="container">
-          <div class="top_wrapper">
-            <div class="d-flex justify-content-center align-items-center">
-              <a href="./index.html">
-                <div class="logo"></div>
-              </a>
-              <ul>
-                <li>
-                  <a href="">FITNESS</a>
-                </li>
-                <li>
-                  <a href="">SPORT</a>
-                </li>
-                <li>
-                  <a href="">COLLECTIONS</a>
-                </li>
-                <li>
-                  <a href="">CUSTOMER SERVICE</a>
-                  <!-- <div class="services">
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <a href="">CUSTOMER SERVICE</a>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a class="dropdown-item" href="#">My account</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Privacy policy</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Terms & conditions</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Refund policy</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Help Center</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div> -->
-                </li>
-              </ul>
+          <div class="top_wrapper row">
+            <div
+              class="footer_item footer_item_column col-md-3 col-sm-6 col-xs-12 collapsible"
+            >
+              <h3 class="title">Products</h3>
+              <div class="row">
+                <div class="col-xs-12">
+                  <ul>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Release Dates</a></li>
+                    <li><a href="#">Sales</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="footer_item footer_item_column col-md-3 col-sm-6 col-xs-12 collapsible"
+            >
+              <h3 class="title">Collections</h3>
+              <div class="row">
+                <div class="col-xs-12">
+                  <ul>
+                    <li><a href="#">Club C</a></li>
+                    <li><a href="#">Superstar</a></li>
+                    <li><a href="#">Running Shoes</a></li>
+                    <li><a href="#">Cloudfoam Pure</a></li>
+                    <li><a href="#">NMD</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Stan Smith</a></li>
+                    <li><a href="#">Classic Leather</a></li>
+                    <li><a href="#">BB 400</a></li>
+                    <li><a href="#">Tiro</a></li>
+                    <li><a href="#">adicolor</a></li>
+                    <li><a href="#">Back to School</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="footer_item footer_item_column col-md-3 col-sm-6 col-xs-12 collapsible"
+            >
+              <h3 class="title">Get Help</h3>
+              <div class="row">
+                <div class="col-xs-12">
+                  <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="footer_item footer_item_column col-md-3 col-sm-6 col-xs-12 collapsible"
+            >
+              <h3 class="title">About Us</h3>
+              <div class="row">
+                <div class="col-xs-12">
+                  <ul>
+                    <li><a href="#">About Shop</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -657,22 +741,27 @@
           <div class="container">
             <div class="body_content_item">
               <div class="form">
-                <form>
+                <form id="myForm">
                   <div class="mb-3">
                     <h3>Subscribe</h3>
                     <p>Receive product news and updates in your inbox.</p>
                     <div class="form-floating mb-3">
                       <input
                         type="email"
-                        class="form-control"
+                        class="form-control mb-2"
                         id="floatingInput"
                         placeholder="name@example.com"
                       />
-                      <label for="floatingInput">Email address</label>
+                      <label for="floatingInput" id="floatingInput"
+                        >Email address</label
+                      >
+                      <span class="error" id="emailError"
+                        >A valid email address is required.</span
+                      >
                     </div>
                   </div>
 
-                  <div class="mb-3 form-check">
+                  <div class="form-check">
                     <input
                       type="checkbox"
                       class="form-check-input"
@@ -683,7 +772,12 @@
                       <a href="">Terms of Conditions</a> .</label
                     >
                   </div>
-                  <button type="submit" class="btn btn-primary">Send</button>
+                  <span class="error" id="checkboxError"
+                    >The checkbox is required. Please select it.</span
+                  >
+                  <button type="submit" class="btn btn-primary mt-3">
+                    Send
+                  </button>
                 </form>
               </div>
               <div class="social_media">
@@ -763,6 +857,12 @@
         </div>
       </div>
     </footer>
+    <!-- - -->
+
+    <a href="#" class="backToTop cd-top text-replace js-cd-top"
+      ><i class="fa-solid fa-chevron-up"></i
+    ></a>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -786,8 +886,13 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- back to top -->
+    <script src="../js/vendor/util.js"></script>
+    <script src="../js/vendor/main-backtotop.js"></script>
+
     <!-- index JS -->
-    <script src="../js/index.js"></script>
-    <script src="../js/indexdetail.js"></script>
+    <script src="../js/indexch.js"></script>
+    <script src="../js/controlerDetails.js"></script>
+    <!-- <script src="../js/indexdetail.js"></script> -->
   </body>
 </html>

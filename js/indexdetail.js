@@ -25,10 +25,11 @@
     function renderProduct(arr) {
       let content = "";
       arr.forEach((item, index) => {
-        let { image, name, price } = item;
+        let { image, name, price, id } = item;
         content += `
         <div class="col-md-3 col-sm-6 mt-4">
-          <div class="product_item position-relative">
+          <a href="../pageDetail/detail1.html?id=${id}" class="text-decoration-none">
+          <div class="product_item position-relative shadow p-3 mb-5 bg-body-tertiary rounded">
             <img src="${image}" alt="${name}"/>
             <h5 >${name}</h5>
             <p class="mb-0">Types of Shoes</p>
@@ -40,12 +41,14 @@
               currency: "USD",
             })}</div>
             </div>
-            <button class="btn-favorite position-absolute heart-icon"><span class="span-favorite" id="spanlove"><i class="fa-regular fa-heart icon-favorite" id="heartlove"></i></span></button>
+            <button class="btn-favorite position-absolute heart-icon"><span class="span-favorite"><i class="fa-regular fa-heart icon-favorite"></i></span></button>
           </div>
+          </a>
         </div>
         `;
       });
       document.getElementById("product_item").innerHTML = content;
+      // <button class="btn-favorite position-absolute heart-icon"><span class="span-favorite"><i class="fa-regular fa-heart icon-favorite"></i></span></button>
     }
 
     // document.getElementById("heart_love").onclick = function() {
