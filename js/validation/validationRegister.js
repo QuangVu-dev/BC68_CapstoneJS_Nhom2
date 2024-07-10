@@ -3,8 +3,7 @@
 
 // kiểm tra dữ liệu rỗng
 function checkEmptyValue(value, errorField) {
-  // thực hiện kiểm tra lỗi cho người dùng
-  if (!value) {
+  if (value.length==0) {
     // TH mà bị lỗi
     errorField.innerHTML = "Vui lòng không bỏ trống trường này";
     return false;
