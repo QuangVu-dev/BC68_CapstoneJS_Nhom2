@@ -103,11 +103,24 @@
                 flex: 0 0 25%;
 
                 .product_item {
+                  position: relative !important;
                   display: flex;
                   flex-direction: column;
                   align-items: center;
                   text-align: center;
+                  transition: all 0.3s ease-in-out;
+                  overflow: hidden;
+
+                  &:hover .btn-view {
+                    opacity: 1;
+                    pointer-events: auto;
+                  }
                 }
+              }
+              .link-view {
+                text-decoration: none;
+                display: inline-block;
+                height: 346.2px;
               }
               img {
                 max-width: 100%;
@@ -119,6 +132,8 @@
                 text-transform: uppercase;
                 font-size: $fs-base;
                 margin-top: 0.5rem;
+                color: $black;
+                text-decoration: none;
               }
 
               p {
@@ -144,16 +159,52 @@
                 font-weight: bold;
               }
               .btn-favorite {
+                position: absolute;
                 top: 20px;
                 left: 20px;
                 border: unset;
                 background-color: transparent;
                 font-size: $fs-lg;
 
+                .fa-heart {
+                  color: $black;
+                }
                 .span-favorite {
                   display: flex;
                   justify-content: center;
                 }
+              }
+              .btn-view {
+                position: absolute;
+                opacity: 0;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+                border-width: 0px !important;
+                transition: all 0.3s ease;
+                pointer-events: none;
+                color: $white-1;
+                background-color: $black;
+                border-color: $black;
+                z-index: 10;
+                cursor: pointer;
+                &:hover {
+                  background: $blue-3;
+                  border: 1px solid $blue-3;
+                }
+              }
+
+              .span-view {
+                line-height: 1.5;
+                display: inline-block;
+                @include styleText($white-3, $fw-normal, $fs-base);
+                white-space: nowrap;
+                text-align: center;
+                touch-action: manipulation;
+                height: 40px;
+                padding: 8px 15px;
+                border-radius: 2px;
               }
             }
           }
@@ -255,6 +306,22 @@
     .collection-footer div {
       color: #333;
       font-weight: bold;
+    }
+    .btn-favorite {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border: unset;
+      background-color: transparent;
+      font-size: $fs-lg;
+
+      .fa-heart {
+        color: $black;
+      }
+      .span-favorite {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
