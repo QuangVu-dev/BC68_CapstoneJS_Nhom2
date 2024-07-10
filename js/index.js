@@ -24,6 +24,7 @@ function renderProduct(arr) {
     let { image, name, price } = item;
     content += `
     <div class="col-md-3 col-sm-6 mt-4">
+    
       <div class="product_item position-relative
       <a href="#" class="link-view">
       <img src="${image}" alt="${name}"/>
