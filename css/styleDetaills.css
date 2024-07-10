@@ -153,6 +153,14 @@ section {
   text-align: center;
 } */
 
+.about h3 {
+  text-transform: uppercase;
+}
+
+.content_shoe h1 {
+  text-transform: uppercase;
+}
+
 .about_shoe {
   margin: 30px 0;
 }
