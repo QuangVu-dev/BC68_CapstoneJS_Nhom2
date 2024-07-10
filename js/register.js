@@ -2,9 +2,27 @@ function AddRegister(e){
     e.preventDefault();
     let arrField = document.querySelectorAll("#formRegister input, #formRegister select");
     let user = {};
+    let isValid = true; 
     for (let field of arrField){
         let{id, value} = field;
         user[id] = value;
+    let parent = field.parentElement;
+    let errorField = parent.querySelector("span");
+    let check = checkEmptyValue(value, errorField);
+       isValid &= check;
+    if (check && id == "txtEmail") {
+       isValid &= checkEmailValue(value, errorField);
+    }   
+    if (check && id == "txtName") {
+      isValid &= checkName(value,errorField);
+    }
+    
+    if (check && id == "txtPhone") {
+      isValid &= checkPhoneNumberValue(value, errorField);
+    }
+    if (check && id == "txtGender") {
+      isValid &= checkGender(value, errorField);
+    }
     }
     console.log(user);
    let promise = axios({

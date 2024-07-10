@@ -1045,7 +1045,35 @@ footer .footer_copyright .copyright_content .copyright_right {
   text-align: right;
 }
 
-<<<<<<< HEAD
+.backToTop {
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+  visibility: hidden;
+  opacity: 0;
+}
+.backToTop:hover {
+  opacity: 0.8;
+  border-color: #1c1c1c;
+  outline: 0.0625rem solid #1c1c1c;
+}
+.backToTop i {
+  background: rgb(255, 255, 255);
+  color: #000;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  transition: background 0.25s ease-out;
+  font-size: 16px;
+  border: 0.0625rem solid #000;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 #register {
   background: url(./../../image/bg_footer.jpg);
   background-position: center;
@@ -1117,33 +1145,4 @@ footer .footer_copyright .copyright_content .copyright_right {
   font-weight: 500;
   color: #bd091c;
   transition: all 0.5s;
-=======
-.backToTop {
-  position: fixed;
-  right: 1rem;
-  bottom: 2rem;
-  visibility: hidden;
-  opacity: 0;
-}
-.backToTop:hover {
-  opacity: 0.8;
-  border-color: #1c1c1c;
-  outline: 0.0625rem solid #1c1c1c;
-}
-.backToTop i {
-  background: rgb(255, 255, 255);
-  color: #000;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  text-align: center;
-  transition: background 0.25s ease-out;
-  font-size: 16px;
-  border: 0.0625rem solid #000;
-}
-
-.cd-top--is-visible {
-  visibility: visible;
-  opacity: 1;
->>>>>>> db737ddac09f80ce98c453c077766c86a70157f0
 }/*# sourceMappingURL=style.css.map */
