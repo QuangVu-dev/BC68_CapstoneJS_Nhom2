@@ -42,7 +42,10 @@
             })}</div>
             </div>
             <button class="btn-favorite position-absolute heart-icon"><span class="span-favorite"><i class="fa-regular fa-heart icon-favorite"></i></span></button>
+          <div class="btn_viewshoe">
+              <button>Xem nhanh</button>
           </div>
+            </div>
           </a>
         </div>
         `;

@@ -92,7 +92,7 @@
       }
 
       // size
-      //  arrsize = size.map(0,length);
+      //  arrsize = size.map(0,length); 
       function renderSize(arrsize) {
         let content = "";
         arrsize.forEach((item, index) => {
