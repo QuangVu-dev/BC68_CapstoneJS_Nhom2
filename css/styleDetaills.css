@@ -91,7 +91,7 @@ section {
 
 .container_Content {
   max-width: 1550px;
-  margin-top: 120px;
+  margin-top: 93px;
 }
 
 /* .row{
@@ -111,7 +111,9 @@ section {
   overflow-y: scroll;
   /* position: relative; */
   /* margin-top: 150px; */
-  /* border: rgb(36, 68, 150, 0.06) 1px solid; */
+  border: 1px solid #e5e5e5;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .col-7::-webkit-scrollbar {
@@ -160,6 +162,9 @@ section {
 .contenImg .img_item {
   font-size: 25px;
   position: relative;
+  padding-left: 85px;
+  padding-right: 85px;
+  background-color: #f3f0f1;
 }
 
 /* .contenImg .img_item img{
@@ -202,6 +207,8 @@ section {
 
 .about_shoe {
   margin: 30px 0;
+  padding-left: 60px;
+  padding-right: 45px;
 }
 
 .about_shoe .about p {
@@ -210,6 +217,8 @@ section {
 
 .shoes {
   margin: 20px 0;
+  padding-left: 60px;
+  padding-right: 45px;
 }
 
 .content_shoe {
@@ -288,10 +297,10 @@ section {
   margin-bottom: 30px;
 }
 
-/* .rating {
-  display: flex;
-  justify-content: center;
-} */
+.rating {
+  padding-left: 60px;
+  padding-right: 45px;
+}
 
 .stars {
   text-align: center;
@@ -307,10 +316,15 @@ section {
   color: white;
   cursor: pointer;
 } */
+.question {
+  padding-bottom: 50px;
+  padding-left: 60px;
+  padding-right: 45px;
+}
 
 .question input {
   width: 90%;
-  padding: 8px 0;
+  padding: 8px 15px;
   border-radius: 3px;
 }
 
@@ -395,6 +409,7 @@ section {
 .size_shoe {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* modal */
@@ -449,7 +464,6 @@ section {
 }
 
 .store {
-  border: rgb(36, 68, 150, 0.06) 1px solid;
   margin: 20px;
   padding: 20px 0;
 }
@@ -496,4 +510,5 @@ section {
   animation: move1;
   animation-duration: 2s;
   animation-iteration-count: calc();
+  background-color: #e5e5e9;
 }

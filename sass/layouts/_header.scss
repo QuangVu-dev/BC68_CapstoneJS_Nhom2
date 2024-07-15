@@ -308,6 +308,66 @@ header {
   }
 }
 
+// MODAL FAVORITE
+.modal.fade .modal-dialog.modal-dialog-slide-out {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+.modal.fade.show .modal-dialog.modal-dialog-slide-out {
+  transform: translateX(0);
+}
+.modal-dialog.modal-dialog-slide-out {
+  height: 100vh;
+  width: 450px;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.modal-content {
+  height: 100%; /* Ensure content takes full height */
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#clearFavorites {
+  background-color: $white-1;
+  border-color: transparent;
+  color: $black;
+  &:hover {
+    background: rgba(0, 0, 0, 0.08);
+    color: rgb(0, 0, 0);
+  }
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.favorite-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.favorite-item .item-info {
+  flex: 1;
+  margin-left: 1rem;
+}
+.favorite-item .item-info h6 {
+  margin: 0;
+}
+.favorite-item .item-info p {
+  margin: 0;
+}
+.favorite-item .btn-view-detail {
+  margin-left: 1rem;
+}
+
 // ANIMATION NOTIFICATION
 @keyframes notify {
   0%,

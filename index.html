@@ -206,6 +206,7 @@
                       type="search"
                       placeholder="Search"
                       aria-label="Search"
+                      id="search"
                     />
                     <div class="search-icon">
                       <span
@@ -224,11 +225,45 @@
                   </button>
                   <div class="favorite">
                     <span class="favorite-content">
-                      <a href="#" class="text-dark"
+                      <a
+                        href="#"
+                        class="text-dark"
+                        data-bs-toggle="modal"
+                        data-bs-target="#favoriteModal"
                         ><i class="far fa-heart"></i
                       ></a>
                     </span>
-                    <span class="favorite-notification" id="list-count"></span>
+                    <span class="favorite-notification" id="favorite-count"
+                      >0</span
+                    >
+                    <!-- Favorite Modal -->
+                    <div
+                      class="modal fade"
+                      id="favoriteModal"
+                      tabindex="-1"
+                      aria-labelledby="favoriteModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-dialog-slide-out">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="favoriteModalLabel">
+                              Your Favorites
+                            </h5>
+                            <button
+                              type="button"
+                              class="btn btn-danger btn-sm"
+                              id="clearFavorites"
+                            >
+                              Clear All
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div id="favorite-items"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="cart-shopping">
                     <button
@@ -427,12 +462,12 @@
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link active"
-                    id="pills-allprojects-tab"
+                    id="pills-newshoes-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#pills-allprojects"
+                    data-bs-target="#pills-newshoes"
                     type="button"
                     role="tab"
-                    aria-controls="pills-allprojects"
+                    aria-controls="pills-newshoes"
                     aria-selected="true"
                   >
                     NEW SHOES
@@ -442,30 +477,385 @@
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link"
-                    id="pills-illustration-tab"
+                    id="pills-newclothing-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#pills-illustration"
+                    data-bs-target="#pills-newclothing"
                     type="button"
                     role="tab"
-                    aria-controls="pills-illustration"
+                    aria-controls="pills-newclothing"
                     aria-selected="false"
                   >
                     NEW CLOTHING
                   </button>
                 </li>
               </ul>
-              <div
-                id="carouselExampleAutoplaying"
-                class="carousel slide"
-                data-bs-ride="carousel"
-                data-interval="2000"
-              >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div
-                      class="row product_item_container"
-                      id="product_item"
-                    ></div>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-newshoes"
+                  role="tabpanel"
+                  aria-labelledby="pills-newshoes-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                    data-interval="2000"
+                  >
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div
+                          class="row product_item_container"
+                          id="product_item"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-newclothing"
+                  role="tabpanel"
+                  aria-labelledby="pills-newclothing-tab"
+                  tabindex="0"
+                >
+                  <div class="row" id="clothing_item_content">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_1_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_1_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_1_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Sport Classics Graphic T-Shirt</h5>
+                          <p class="mb-0">Unisex, T-shirt</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$100.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_2_2.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_2_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_2_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Speed jacket</h5>
+                          <p class="mb-0">Men's, Jackets</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$50.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_3_2.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_3_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_3_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Classics Vector Track Jacket</h5>
+                          <p class="mb-0">Unisex, Jackets</p>
+                          <p class="mb-2">2 colors</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$175.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_4_2.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_4_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_4_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Chill Athletic Tee</h5>
+                          <p class="mb-0">Women's, T-shirt</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$100.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_5_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_5_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_5_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Classics Ae Vintage Tank</h5>
+                          <p class="mb-0">Women's, Tops</p>
+                          <p class="mb-2">2 colors</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$150.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_6_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_6_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_6_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Lux Bold Racer Bra</h5>
+                          <p class="mb-0">Women's, Bra</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$75.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_7_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_7_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_7_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Strength Sport 4.0</h5>
+                          <p class="mb-0">Men's, Sport</p>
+                          <p class="mb-2">3 colors</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$200.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_arrivals/arrivals_8_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_8_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_arrivals/arrivals_8-2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Running Vector Leggings</h5>
+                          <p class="mb-0">Women's, Tights</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$125.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -474,6 +864,7 @@
         </div>
       </div>
     </div>
+
     <!-- end new arrivals -->
 
     <!-- New collection -->
@@ -498,12 +889,12 @@
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link active"
-                    id="pills-allprojects-tab"
+                    id="pills-clubc-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#pills-allprojects"
+                    data-bs-target="#pills-clubc"
                     type="button"
                     role="tab"
-                    aria-controls="pills-allprojects"
+                    aria-controls="pills-clubc"
                     aria-selected="true"
                   >
                     CLUB C
@@ -512,26 +903,26 @@
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link"
-                    id="pills-illustration-tab"
+                    id="pills-sportswear-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#pills-illustration"
+                    data-bs-target="#pills-sportswear"
                     type="button"
                     role="tab"
-                    aria-controls="pills-illustration"
+                    aria-controls="pills-sportswear"
                     aria-selected="false"
                   >
-                    CLASSIC LEATHER
+                    SPORTSWEAR
                   </button>
                 </li>
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link"
-                    id="pills-allprojects-tab"
+                    id="pills-bb400-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#pills-allprojects"
+                    data-bs-target="#pills-bb400"
                     type="button"
                     role="tab"
-                    aria-controls="pills-allprojects"
+                    aria-controls="pills-bb400"
                     aria-selected="true"
                   >
                     BB 400
@@ -540,52 +931,239 @@
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link"
-                    id="pills-illustration-tab"
+                    id="pills-backtoschool-tab"
                     data-bs-toggle="pill"
-                    data-bs-target="#pills-illustration"
+                    data-bs-target="#pills-backtoschool"
                     type="button"
                     role="tab"
-                    aria-controls="pills-illustration"
+                    aria-controls="pills-backtoschool"
                     aria-selected="false"
                   >
                     BACK TO SCHOOL
                   </button>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="collection_body">
-            <div
-              id="carouselExampleAutoplaying"
-              class="carousel slide"
-              data-bs-ride="carousel"
-              data-interval="15000"
-            >
-              <div class="carousel-inner" id="collection_item"></div>
-              <button
-                class="carousel-control-prev collection-prev"
-                type="button"
-                data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next collection-next"
-                type="button"
-                data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-clubc carouselExampleAutoplaying"
+                  role="tabpanel"
+                  aria-labelledby="pills-clubc-tab"
+                  tabindex="0"
+                >
+                  <div class="collection_body">
+                    <div
+                      class="carousel slide"
+                      data-bs-ride="carousel"
+                      data-interval="15000"
+                    >
+                      <div class="carousel-inner" id="collection_item"></div>
+                      <button
+                        class="carousel-control-prev collection-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next collection-next"
+                        type="button"
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div
+                  class="tab-pane fade"
+                  id="pills-sportswear"
+                  role="tabpanel"
+                  aria-labelledby="pills-sportswear-tab"
+                  tabindex="0"
+                >
+                  <div class="row" id="sportswear_item_content">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_collection/arrivals_9_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_9_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_9_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Sport Classics Graphic T-Shirt</h5>
+                          <p class="mb-0">Unisex, T-shirt</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$100.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_collection/arrivals_10_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_10_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_10_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Sport Classics Graphic T-Shirt</h5>
+                          <p class="mb-0">Unisex, T-shirt</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$100.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_collection/arrivals_11_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_11_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_11_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Sport Classics Graphic T-Shirt</h5>
+                          <p class="mb-0">Unisex, T-shirt</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$100.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                      <a href="#" class="text-decoration-none">
+                        <div class="clothing_item card_slide position-relative">
+                          <img
+                            src="./image/new_collection/arrivals_12_1.png"
+                            alt=""
+                            style="opacity: 0"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_12_1.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_first-image clothing_item-image"
+                          />
+                          <img
+                            src="./image/new_collection/arrivals_12_2.png"
+                            alt=""
+                            layout="responsive"
+                            class="clothing_item_second-image clothing_item-image"
+                          />
+                          <h5>Sport Classics Graphic T-Shirt</h5>
+                          <p class="mb-0">Unisex, T-shirt</p>
+                          <p class="mb-2">1 color</p>
+                          <div
+                            class="d-flex align-items-center clothing-footer text-center"
+                          >
+                            <button class="w-50 p-2 border-0">Buy now</button>
+                            <div class="w-50 p-2">$100.00</div>
+                          </div>
+                          <button
+                            class="btn-favorite position-absolute heart-icon"
+                          >
+                            <span class="span-favorite"
+                              ><i class="fa-regular fa-heart icon-favorite"></i
+                            ></span>
+                          </button>
+                          <div class="btn-view">
+                            <button>View detail</button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -1112,6 +1690,7 @@
                       <span class="error" id="emailError"
                         >A valid email address is required.</span
                       >
+                      <span id="error-msg"></span>
                     </div>
                   </div>
 

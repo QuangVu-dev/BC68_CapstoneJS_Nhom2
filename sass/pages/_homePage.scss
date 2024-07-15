@@ -111,10 +111,9 @@
                   overflow: hidden;
                 }
               }
-              .link-view {
-                text-decoration: none;
-                display: inline-block;
-                height: 346.2px;
+              .col-sm-6 a:hover > .product_item .btn-view {
+                opacity: 1;
+                transition: all 0.5s;
               }
               img {
                 max-width: 100%;
@@ -168,42 +167,157 @@
                   justify-content: center;
                 }
               }
+
               .btn-view {
                 position: absolute;
+                text-align: center;
                 opacity: 0;
+                width: 45%;
                 top: 35%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                transition: all 0.3s ease;
-                cursor: pointer;
 
                 & button {
-                  pointer-events: none;
-                  color: $white-1;
-                  background-color: $black;
-                  border-color: $black;
-                  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+                  border: none;
+                  padding: 8px 15px;
+                  border-radius: 4px;
+                  background: $black;
+                  color: $white-3;
                   backdrop-filter: blur(0px);
-                  border-width: 0px !important;
+                  -webkit-backdrop-filter: blur(0px);
+                }
+                & button:hover {
+                  opacity: 0.8;
+                  color: white;
+                  background: rgb(36, 70, 150);
+                  backdrop-filter: blur(0px);
+                  -webkit-backdrop-filter: blur(0px);
+                }
+              }
+            }
+          }
+        }
 
-                  &:hover {
-                    background: $blue-3;
-                    border: 1px solid $blue-3;
-                    backdrop-filter: blur(0px);
-                  }
+        #clothing_item_content {
+          // overflow: hidden;
+          .col-sm-6 a:hover > .clothing_item .btn-view {
+            opacity: 1;
+            transition: all 0.5s;
+          }
+          div {
+            overflow: hidden;
+            a {
+              &:hover .card_slide .clothing_item_first-image {
+                transform: translateX(-100%);
+                visibility: hidden;
+              }
+              &:hover .card_slide .clothing_item_second-image {
+                transform: translateX(0%);
+                visibility: visible;
+                opacity: 1;
+              }
+              .clothing_item {
+                img {
+                  max-width: 100%;
+                  max-height: 100%;
+                  background-color: $white-5;
+                }
+
+                h5 {
+                  text-transform: uppercase;
+                  font-size: $fs-base;
+                  margin-top: 0.5rem;
+                  color: $black;
+                  text-decoration: none;
+                }
+
+                p {
+                  color: $grey;
+                  margin-bottom: 0px;
+                  font-size: $fs-m;
+                }
+
+                .clothing-footer {
+                  background-color: #e0e0e0;
+                  padding: 10px;
+                  border-radius: 10px;
+                }
+                .clothing-footer button {
+                  background-color: $blue-4;
+                  color: white;
+                  border: none;
+                  padding: 10px 20px;
+                  border-radius: 5px;
+                }
+                .clothing-footer div {
+                  color: #333;
+                  font-weight: bold;
                 }
               }
 
-              .span-view {
-                line-height: 1.5;
-                display: inline-block;
-                @include styleText($white-3, $fw-normal, $fs-base);
-                white-space: nowrap;
+              .card_slide {
+                img {
+                  width: 100%;
+                  aspect-ratio: 1/1;
+                  object-fit: cover;
+                }
+                .clothing_item-image {
+                  transition: transform 0.65s ease 0s;
+                  width: 100%;
+                  height: auto;
+                  position: absolute;
+                  inset: 0px;
+                }
+                .clothing_item_first-image {
+                  transform: translateX(0%);
+                }
+                .clothing_item_second-image {
+                  transform: translateX(100%);
+                  visibility: hidden;
+                  transition: all 0.65s ease 0s;
+                }
+              }
+              .btn-view {
+                position: absolute;
                 text-align: center;
-                touch-action: manipulation;
-                height: 40px;
-                padding: 8px 15px;
-                border-radius: 2px;
+                opacity: 0;
+                width: 45%;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                & button {
+                  border: none;
+                  padding: 8px 15px;
+                  border-radius: 4px;
+                  background: $black;
+                  color: $white-3;
+                  backdrop-filter: blur(0px);
+                  -webkit-backdrop-filter: blur(0px);
+                }
+                & button:hover {
+                  opacity: 0.8;
+                  color: white;
+                  background: rgb(36, 70, 150);
+                  backdrop-filter: blur(0px);
+                  -webkit-backdrop-filter: blur(0px);
+                }
+              }
+              .btn-favorite {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                border: unset;
+                background-color: transparent;
+                font-size: $fs-lg;
+
+                .fa-heart {
+                  color: $black;
+                }
+                .span-favorite {
+                  display: flex;
+                  justify-content: center;
+                }
               }
             }
           }
@@ -277,6 +391,36 @@
           text-align: center;
         }
       }
+    }
+    .btn-view {
+      position: absolute;
+      text-align: center;
+      opacity: 0;
+      width: 45%;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      & button {
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        background: $black;
+        color: $white-3;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+      }
+      & button:hover {
+        opacity: 0.8;
+        color: $white-3;
+        background: $blue-3;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+      }
+    }
+    .col-sm-6 a:hover > .collection_item .btn-view {
+      opacity: 1;
+      transition: all 0.3s;
     }
     img {
       max-width: 100%;
