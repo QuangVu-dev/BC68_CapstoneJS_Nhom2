@@ -148,3 +148,11 @@ function renderCollection(arr) {
   }
   document.getElementById("collection_item").innerHTML = content;
 }
+
+document
+  .querySelector(".bubble-contact-wrapper")
+  .addEventListener("click", function () {
+    document
+      .querySelector(".bubble-contact-listing-wrapper")
+      .classList.toggle("active");
+  });
