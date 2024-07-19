@@ -94,6 +94,14 @@ header {
                 &:focus::placeholder {
                   color: transparent;
                 }
+
+                &::-ms-clear {
+                  display: none;
+                }
+
+                &::-webkit-search-cancel-button {
+                  display: none;
+                }
               }
 
               .search-icon {
@@ -348,24 +356,29 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
-}
-.favorite-item img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-}
-.favorite-item .item-info {
-  flex: 1;
-  margin-left: 1rem;
-}
-.favorite-item .item-info h6 {
-  margin: 0;
-}
-.favorite-item .item-info p {
-  margin: 0;
-}
-.favorite-item .btn-view-detail {
-  margin-left: 1rem;
+
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  .item-info {
+    flex: 1;
+    margin-left: 1rem;
+
+    h6 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .btn-view-detail {
+    margin-left: 1rem;
+  }
 }
 
 // ANIMATION NOTIFICATION
